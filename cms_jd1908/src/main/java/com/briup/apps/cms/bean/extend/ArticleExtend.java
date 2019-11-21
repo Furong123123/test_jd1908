@@ -5,32 +5,35 @@ import java.util.List;
 import com.briup.apps.cms.bean.Article;
 import com.briup.apps.cms.bean.Category;
 import com.briup.apps.cms.bean.Comment;
-/**
- * 文章拓展类
- * @author lenovo
- *
- */
+
 public class ArticleExtend extends Article{
-	public static final String STATUS_UNCHECK="未审核";
-	public static final String STATUS_CHECK_PASS="审核通过";
-	public static final String STATUS_CHECK_NOPASS="审核未通过";
+	public static final  String STATUS_UNCHECK ="未审核";
+	public static final  String STATUS_CHECK_PASS ="审核通过";
+	public static final  String STATUS_CHECK_NOPASS ="审核不通过";
 	
-private Category category;
-private List<Comment> comments;
-public List<Comment> getComments() {
-	return comments;
-}
+	private Category category;  
+	private List<Comment> comments;
+	
+	public Category getCategory() {
+		return category;
+	}
 
-public void setComments(List<Comment> comments) {
-	this.comments = comments;
-}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 
-public Category getCategory() {
-	return category;
-}
+	public List<Comment> getComments() {
+		return comments;
+	}
 
-public void setCategory(Category category) {
-	this.category = category;
-}
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
 
+	@Override
+	public String toString() {
+		return "ArticleExtend [category=" + category + ", comments=" + comments + "]";
+	}
+	
+	
 }

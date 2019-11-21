@@ -1,5 +1,4 @@
 package com.briup.apps.cms.utils;
-
 public class Message {
     private Integer status;
     private String message;

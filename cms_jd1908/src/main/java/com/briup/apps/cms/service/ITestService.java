@@ -1,10 +1,13 @@
 package com.briup.apps.cms.service;
- 
- import com.briup.apps.cms.bean.Test;
-  import java.util.List;
-  
-  public interface ITestService {
-	  List<Test> findAll();
- 
-  void saveOrUpdate(Test test); }
- 
+
+import java.util.List;
+
+import com.briup.apps.cms.bean.Test;
+
+
+public interface ITestService {
+	
+	List<Test> findAll();
+	
+	void saveOrUpdate(Test test);
+}

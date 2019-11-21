@@ -1,21 +1,40 @@
 package com.briup.apps.cms.service;
 
-import java.util.List;
-
 import com.briup.apps.cms.bean.BasePrivilege;
 import com.briup.apps.cms.utils.CustomerException;
 import com.briup.apps.cms.vm.PrivilegeTree;
 
+import java.util.List;
+
 public interface IBasePrivilegeService {
-	//查看所有权限
-	List<BasePrivilege> findAll();
-	//通过ParentId查看权限
-	List<BasePrivilege> findByParentId(Long parentId);
-	//保存或更新权限
-	void saveOrUpdate(BasePrivilege privilege) throws CustomerException;
-	//查询权限树
-	List<PrivilegeTree> findPrivilegeTree();
-	//查询用户所有权限
-	List<BasePrivilege> findByUserId(long id);
-	
+    
+    /** 
+     * @Description: 查询所有权限 
+     * @Param: [] 
+     * @return: java.util.List<com.briup.apps.cms.bean.BasePrivilege> 
+     * @Author: charles 
+     * @Date: 2019-11-16 
+     */ 
+    List<BasePrivilege> findAll();
+    
+    /** 
+     * @Description: 通过parentId查询权限
+     * @Param: [parentId] 
+     * @return: java.util.List<com.briup.apps.cms.bean.BasePrivilege> 
+     * @Author: charles 
+     * @Date: 2019-11-17 
+     */ 
+    List<BasePrivilege> findByParentId(Long parentId);
+    
+    /** 
+     * @Description: 保存或更新权限 
+     * @Param: [privilege] 
+     * @return: void 
+     * @Author: charles 
+     * @Date: 2019-11-16 
+     */ 
+    void saveOrUpdate(BasePrivilege privilege) throws CustomerException;
+
+    List<PrivilegeTree> findPrivilegeTree();
+
 }

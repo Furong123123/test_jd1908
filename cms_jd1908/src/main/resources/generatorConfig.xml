@@ -5,13 +5,12 @@
 <!-- mybatis-generator的核心配置文件 -->
 <generatorConfiguration>
 
-  <!--<classPathEntry location="D:\gg\repository\mysql\mysql-connector-java\8.0.16\mysql-connector-java-8.0.16.jar" />-->
-
   <classPathEntry location="E:\briup\maven\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar" />
+ <!--  <classPathEntry location="/Users/lichunyu/springboot/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar" /> -->
   <context id="DB2Tables" targetRuntime="MyBatis3">
 
     <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-        connectionURL="jdbc:mysql://127.0.0.1:3306/cms_jd1908?serverTimezone=UTC"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/cms_jd1908"
         userId="briup"
         password="briup123">
       <!--产生selectByPrimaryKey-->
@@ -43,20 +42,22 @@
 
 	<!-- 映射配置 -->
     <!---->
-    <!-- 通过表自动映射  -->
-  <!--     <table tableName="test" domainObjectName="Test" ></table> -->
-    <table tableName="cms_category" domainObjectName="Category" ></table> 
-    <table tableName="cms_article" domainObjectName="Article" >
-    <!-- 去除BLOB类 -->
-    <columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
-    <columnOverride column="source" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>  
-    </table>
-    <table tableName="cms_comment" domainObjectName="Comment" ></table> 
-   <!--  <table tableName="cms_comment" domainObjectName="Comment" ></table> 
-    <table tableName="cms_comment" domainObjectName="Comment" ></table> 
-    <table tableName="cms_comment" domainObjectName="Comment" ></table> 
-    <table tableName="cms_comment" domainObjectName="Comment" ></table> 
-    <table tableName="cms_comment" domainObjectName="Comment" ></table>  -->
+   <!--  <table tableName="cms_category" domainObjectName="Category" ></table> -->
+    <!-- <table tableName="cms_article" domainObjectName="Article" >
+    	<columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+    	<columnOverride column="source" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+    </table> -->
+    <!-- <table tableName="cms_comment" domainObjectName="Comment" ></table>
+    <table tableName="cms_comment" domainObjectName="Comment" ></table>
+    <table tableName="test" domainObjectName="Test" ></table> -->
+    <!--权限表  -->
+   <!--  <table tableName="cms_privilege" domainObjectName="Privilege" ></table>
+    <table tableName="cms_user" domainObjectName="User" ></table>
+    <table tableName="cms_role" domainObjectName="Role" ></table> -->
+    
+    <!-- <table tableName="cms_user_role" domainObjectName="CmsUserRole" ></table>
+    <table tableName="cms_role_privilege" domainObjectName="CmsRolePrivilege" ></table>
+     -->
 	<!--
 	 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 	-->

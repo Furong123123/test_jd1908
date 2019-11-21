@@ -35,16 +35,16 @@ public class MessageUtil {
         message.setTimestamp(new Date().getTime());
         return message;
     }
+
     /**
      * 返回成功的消息，一般用于查询操作的结果返回
      * */
     public static Message success(Object data){
-    	Message message = new Message();
-    	message.setStatus(200);
-    	message.setMessage("success");
-    	message.setData(data);
-    	message.setTimestamp(new Date().getTime());
-    	return message;
+        Message message = new Message();
+        message.setStatus(200);
+        message.setMessage("success");
+        message.setData(data);
+        message.setTimestamp(new Date().getTime());
+        return message;
     }
-
 }
